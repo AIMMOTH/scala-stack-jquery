@@ -4,16 +4,16 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.aimmoth.scalastack</groupId>
-  <artifactId>scala-stack</artifactId>
+  <groupId>com.github.aimmoth.scalastack.jquery</groupId>
+  <artifactId>scala-stack-jquery</artifactId>
 
   <packaging>war</packaging>
   <name>Scala Stack</name>
-  <version>0.2-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
 
   <description>Scala Stack using Google Flexible Environment with backend producing HTML, CSS and JavaScript with out any files (.html, .css, .sass, .less, .js) and with out any frontend builders like Gulp or Grunt.</description>
 
-  <url>https://github.com/aimmoth/scala-stack/tree/jquery</url>
+  <url>https://github.com/aimmoth/scala-stack-jquery/tree/jquery</url>
 
   <developers>
     <developer>
