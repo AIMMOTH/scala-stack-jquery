@@ -37,6 +37,7 @@ object Route {
 
     RequestUriParser(path) match {
       case Right(RequestUriTokens(Some(path), _)) => HelperParser.splitPathBySlash(path).getOrElse(Nil) match {
+        case "" :: _ => new Redirect("index.min.html", Languages.default)
         case javascript :: _ if javascript.startsWith("javascript") => javascriptCompiler
         case "_ah" :: _ => None // Google App Engine!
         case "WEB-INF" :: _ => None
@@ -50,7 +51,10 @@ object Route {
           case (Some(language), _)            => new Redirect("404", language)
           case _                              => redirect404
         }
-        case _ => redirect404
+        case stuff =>
+          println(s"stuff:$stuff")
+          logger.debug(s"stuff:$stuff")
+          redirect404
       }
       case _ => redirect404
     }
